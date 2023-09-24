@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <script src="https://kit.fontawesome.com/6ab0d088c8.js" crossorigin="anonymous"></script>
+
+</head>
+<title> Sample</title>
+<style>
+    body {
+        background-image: url("images.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+        margin-right: 400px;
+        background-attachment: fixed;
+      
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 70%;
+    }
+
+    td,
+    th {
+        border: 1px solid #f9f9f9;
+        text-align: left;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fffefe;
+    }
+    .fas{
+        font-size: 40px;
+    }
+
+    #Intro1{
+     margin-top: 00px;
+    }
+    .fa-bars{
+        color: #004D99;
+    }
+
+    .glow-on-hover {
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: rgb(25, 203, 177);
+    background: rgb(249, 248, 248);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    /* background: linear-gradient(45deg, #eae6e6, #0b0a0a,#a59e9e,#f0cfcf); */
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 200%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(255, 253, 253)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.button {
+    height: 10px;
+  width: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1.2px;
+  font-weight: 200;
+  color: #03030a;
+  background: #f8f6f6;
+/* background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%); */
+  border: none;
+ 
+  /* box-shadow: 12px 12px 24px rgba(15, 16, 16, 0.64); */
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+/* button::before {
+content: '';
+  border-radius: 50px;
+  min-width: calc(100px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+} */
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+/* button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #e65e0f;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+} */
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+/* .multi-bg {
+  width: 100px;
+  height: 100px;
+  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    bottom right,
+    left,
+    right;
+} */
+
+
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+.para{
+font-family:Trebuchet MS;
+text-align: left;
+
+}
+    
+</style>
+
+
+<body>
+
+
+    <div class="main-body">
+        <nav id="navbar">
+           
+            <button class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">Menu</button>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            
+            <a href="#Intro" class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">Resource Tracker</a>
+				
+            
+
+            <a href="#Intro1" class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">Skill Matrix</a>
+			
+            <!-- <button href="#Intro1" class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">Skill Matrix</button> -->
+
+            <a href="#Intro2" class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">Leave Tracker</a>
+				
+            <a href="#Intro3" class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">DSR</a>
+				
+            <a href="#" class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">Birthday Tracker</a>
+				
+
+            <a href="#Intro5" class="glow-on-hover" type="button" style="color:#fafbfc;font-family:Trebuchet MS;">WSR</a>
+
+           
+
+        </nav>
+
+        <main id="main-doc">
+
+            <section class="main-section" id="Intro">
+                <header  style="color:#f2f5f8;font-family:Trebuchet MS;">
+                 
+	
+                </header>
+            
+                <!-- <h3  class="multi-bg" style="color:#004d99;font-family:Trebuchet MS;">Resource Tracker
+                </h3> -->
+                <h1 id="watchme" style="color:#004d99;font-family:Trebuchet MS;">Resource Tracker</h1>
+            
+                <!-- <p style="color:#060606;font-family:Trebuchet MS;">click here..</p> -->
+                <p class="button">Click Here</p>
+                    
+                 
+                <a  href="https://cognizantonline.sharepoint.com/:f:/r/sites/ChanelQACognizant/Shared%20Documents/General/Resource%20Pool/Resource%20List/2023?csf=1&web=1&e=zH3Eix" target="_blank" class="button" ><img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/375416i783713B05CAD4A92/image-size/medium?v=v2&px=400" height="35px" width="40px" alt="excel"></a>
+
+               
+                   
+                
+				</section>
+
+
+                <section class="main-section" id="Intro">
+                    <header style="color:#004d99;font-family:Trebuchet MS;">
+                     
+        
+                    </header>
+                
+                    <h3 style="color:#004d99;font-family:Trebuchet MS;">Resource Tracker Documentation
+                    </h3>
+                    
+                    <p class="button">Click Here</p>
+                       
+                    
+                    <a  href="https://cognizantonline-my.sharepoint.com/:p:/r/personal/2231728_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7B1987F798-45DB-49FB-96AA-6ED751686249%7D&file=Automation%20Tracker%20documentation.pptx&action=edit&mobileredirect=true" target="_blank" target="_blank" class="button"><img src="data:image/jpeg;base64,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" height="35px" width="40px" alt="PPT"></a>
+    
+                    <h1 style="color:#004d99;font-family:Trebuchet MS;">Steps To Update the Tracker </h1>
+                  
+
+                    <div class="p">
+                        <p class="para">
+    
+                            1	This is tracker bulit by using the Excel VBA	
+                            </p>	
+                            <p class="para">
+                    
+                            2	Keep the Source File(Latest Allocation Report) and Target File(Chanel QAE Resource Tracker) Ready.	
+                            </p>
+                            <p class="para">
+                                
+                            3	To update the tracker and sync up the Tracker with Latest allocation report press the "Click here to update the button" in the Current Month Details page  						
+                        </p>
+                        <p class="para">
+            
+                            4	Now, you need the select the  Source File(Latest Allocation Report) and click open button						
+                        </p>
+                        <p class="para">
+            
+                            5	After updating you should see the "PROCESS COMPLETED" msg						
+                        </p>
+                        <p class="para">
+                
+                            6	Now go the Pivot Table sheet and press the "Refresh Button" to update the pivot table 					
+                           
+                        </p>
+                        <p class="para">
+                
+                            7	After updating you should see the "PROCESS COMPLETED" msg						
+                        </p>
+                        <p class="para">
+            
+                            8	For any changes please contact M,Barath(2231728)						
+            
+                            </p> 
+                    </div>
+
+                    
+                
+                    
+                    
+                </section>
+
+
+                <section class="main-section" id="Intro1">
+                    <header style="color:#004d99;font-family:Trebuchet MS;">
+                     
+        
+                    </header>
+                
+                    <h3 style="color:#004d99;font-family:Trebuchet MS;">Skill Matrix
+                    </h3>
+                
+                    <p class="button">Click Here</p>
+
+                    <a href="https://cognizantonline.sharepoint.com/:x:/r/sites/ChanelQACognizant/_layouts/15/Doc.aspx?sourcedoc=%7BB98364BF-449A-4167-BC12-D555B5C01A64%7D&file=Chanel%20QEA%20Resources%20-%20Skill%20Matrix.xlsm&action=default&mobileredirect=true" target="_blank" class="button"><img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/375416i783713B05CAD4A92/image-size/medium?v=v2&px=400" height="35px" width="40px" alt="PPT"></a>
+                    
+                    
+                </section>
+                <section class="main-section" id="Intro">
+                    <header style="color:#004d99;font-family:Trebuchet MS;">
+                     
+        
+                    </header>
+                
+                    <h3 style="color:#004d99;font-family:Trebuchet MS;">Skill Matrix Documentation
+                    </h3>
+                
+                   <p class="button">Click Here</p>
+                     
+                    <a  href="https://cognizantonline-my.sharepoint.com/:p:/r/personal/2231728_cognizant_com/_layouts/15/Doc.aspx?sourcedoc=%7B1987F798-45DB-49FB-96AA-6ED751686249%7D&file=Automation%20Tracker%20documentation.pptx&action=edit&mobileredirect=true" target="_blank" target="_blank" class="button"><img src="data:image/jpeg;base64,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" height="35px" width="40px" alt="PPT"></a>
+				 
+		
+                </section>
+              
+
+
+
+    </div>
+</body>
+
+</html>
